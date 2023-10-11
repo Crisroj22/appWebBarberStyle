@@ -1,0 +1,7 @@
+#Ignorar al entorno virtual de python.
+
+Lib/
+
+Scripts/
+
+pyvenv.cfg
