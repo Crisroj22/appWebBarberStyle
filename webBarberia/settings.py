@@ -24,6 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 modo_desarrollo = True
 
+#Fixtures 
+DIRECTORIO_FIXTURE = BASE_DIR / "fixtures"
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -46,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'loginRegistroUsuario',
 ]
 
 MIDDLEWARE = [
@@ -88,7 +92,10 @@ if modo_desarrollo == True:
                 'ENGINE': 'django.db.backends.mysql',
                 'NAME': 'barberStyle',
                 'USER' : 'root',
-                'PASSWORD' : ''
+                'PASSWORD' : '',
+                'OPTIONS' : {
+                    'sql_mode' : 'STRICT_TRANS_TABLES'
+                },
             }
         }
     except:
