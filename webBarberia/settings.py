@@ -95,14 +95,11 @@ if modo_desarrollo == True:
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.mysql',
-                'NAME': 'barberStyle',
-                'USER' : 'root',
-                'PASSWORD' : '',
-                'OPTIONS' : {
-                    'sql_mode' : 'STRICT_TRANS_TABLES'
+                'NAME': 'barbershop',
+                'USER': 'root',
+                'PASSWORD': '22102001'
                 },
             }
-        }
     except:
         print("Puede que haya un problema con la configuracion de la base de datos, revisa su configuracion o ve si es que el servidor local o en nube estan disponibles.")
 else:
