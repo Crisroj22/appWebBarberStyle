@@ -95,9 +95,11 @@ if modo_desarrollo == True:
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.mysql',
-                'NAME': 'barbershop',
-                'USER': 'root',
-                'PASSWORD': '22102001'
+                'NAME': 'barberStyle',
+                'USER' : 'root',
+                'PASSWORD' : '',
+                'OPTIONS' : {
+                    'sql_mode' : 'STRICT_TRANS_TABLES'
                 },
             }
     except:
