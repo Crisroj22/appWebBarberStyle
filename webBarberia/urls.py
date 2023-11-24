@@ -27,4 +27,8 @@ urlpatterns = [
     path("", viewsExtranet.indice, name="index"),
     path("login/", viewsAutenticacion.login, name="loginUsuario"),
     path("registroUsuario/", viewsAutenticacion.registro, name="registroUsuario"),
+    path("headerIntranet/",viewsIntranet.Header,name="headerIntranet"),
+    path('agregarProductos/', viewsIntranet.agregar),
+    path('eliminar3/<int:id>', viewsIntranet.eliminar3),
+    path('actualizar/<int:id>', viewsIntranet.actualizar)
 ]
