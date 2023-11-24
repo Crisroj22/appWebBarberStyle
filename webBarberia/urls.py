@@ -19,7 +19,7 @@ from django.urls import path
 
 from loginRegistroUsuario import views as viewsAutenticacion
 from extranet import views as viewsExtranet
-from intranet import views 
+from intranet import views as viewsIntranet
 
 
 urlpatterns = [
@@ -27,8 +27,8 @@ urlpatterns = [
     path("", viewsExtranet.indice, name="index"),
     path("login/", viewsAutenticacion.login, name="loginUsuario"),
     path("registroUsuario/", viewsAutenticacion.registro, name="registroUsuario"),
-    path("headerIntranet/",views.Header,name="headerIntranet"),
-    path('agregarProductos/', views.agregar),
-    path('eliminar3/<int:id>', views.eliminar3),
-    path('actualizar/<int:id>', views.actualizar)
+    path("headerIntranet/",viewsIntranet.Header,name="headerIntranet"),
+    path('agregarProductos/', viewsIntranet.agregar),
+    path('eliminar3/<int:id>', viewsIntranet.eliminar3),
+    path('actualizar/<int:id>', viewsIntranet.actualizar)
 ]
