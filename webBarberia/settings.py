@@ -102,6 +102,7 @@ if modo_desarrollo == True:
                     'sql_mode' : 'STRICT_TRANS_TABLES'
                 },
             }
+        }
     except:
         print("Puede que haya un problema con la configuracion de la base de datos, revisa su configuracion o ve si es que el servidor local o en nube estan disponibles.")
 else:
